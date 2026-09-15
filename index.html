@@ -1,1188 +1,402 @@
-<!DOCTYPE html><html lang="ur" dir="rtl"><head>
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>اسلامی اقوال | Islamic Quotes</title><meta name="description" content="خوبصورت اسلامی اقوال، صبر، اخلاق، والدین اور قرآن سے متعلق سبق آموز پیغامات۔"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+<title>اسلامی اقوال | خوبصورت اسلامی اقوال اور نصیحتیں</title>
+
+<meta name="description" content="اسلامی اقوال، صبر، اخلاق اور قرآن سے متعلق خوبصورت اور مختصر نصیحتیں پڑھیں، کاپی کریں اور دوسروں تک پہنچائیں۔">
+
+<meta name="keywords" content="اسلامی اقوال, اسلامی Quotes, قرآن, صبر, اخلاق, اسلامی نصیحتیں">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="اسلامی اقوال">
+<meta property="og:description" content="خوبصورت اسلامی اقوال اور نصیحتیں پڑھیں اور دوسروں تک پہنچائیں۔">
+<meta property="og:type" content="website">
+
+<style>
+* {
+    box-sizing: border-box;
 }
 
-:root{
-    --primary:#17624d;
-    --primary-dark:#0d3d30;
-    --secondary:#e7f2ed;
-    --bg:#eef7f1;
-    --card:#ffffff;
-    --text:#20352e;
-    --muted:#667a72;
-    --border:#d7e6df;
-    --shadow:0 12px 35px rgba(0,0,0,.10);
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #17352f;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.9), transparent 35%),
+        linear-gradient(135deg, #b7e4d5, #eefbf5, #a9d8c8);
+    transition: background .4s, color .4s;
 }
 
-body{
-    font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq",
-    "Segoe UI",Arial,sans-serif;
-    background:linear-gradient(135deg,#edf8f1,#dcefe5);
-    color:var(--text);
-    min-height:100vh;
-    transition:.3s;
+header {
+    padding: 25px 15px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #075e54, #128c7e);
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
 }
 
-/* DARK MODE */
-
-body.dark{
-    --primary:#4caf87;
-    --primary-dark:#102f27;
-    --secondary:#183a30;
-    --bg:#0d1d18;
-    --card:#142a23;
-    --text:#edf8f3;
-    --muted:#abc0b7;
-    --border:#285045;
-    --shadow:0 12px 35px rgba(0,0,0,.35);
-
-    background:#0d1d18;
+header h1 {
+    margin: 0 0 15px;
+    font-size: 32px;
 }
 
-/* HEADER */
-
-header{
-    background:linear-gradient(135deg,#0d3d30,#17624d);
-    color:white;
-    text-align:center;
-    padding:35px 20px 25px;
-    box-shadow:0 5px 25px rgba(0,0,0,.18);
+nav button {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 17px;
+    margin: 4px;
+    cursor: pointer;
+    color: #075e54;
+    background: white;
+    font-size: 14px;
+    transition: .3s;
 }
 
-.logo{
-    font-size:42px;
-    font-weight:bold;
+nav button:hover,
+.action-buttons button:hover,
+.search-box button:hover,
+.categories button:hover {
+    transform: translateY(-3px);
 }
 
-.subtitle{
-    margin-top:5px;
-    opacity:.9;
-    font-size:16px;
+.container {
+    width: 92%;
+    max-width: 720px;
+    margin: 35px auto;
 }
 
-/* NAV */
-
-nav{
-    margin-top:22px;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:8px;
+.card,
+.about {
+    background: rgba(255,255,255,.94);
+    border-radius: 25px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0,0,0,.15);
+    animation: fadeIn .7s ease;
 }
 
-nav button{
-    background:rgba(255,255,255,.13);
-    color:white;
-    border:1px solid rgba(255,255,255,.3);
-    padding:10px 18px;
-    border-radius:25px;
-    cursor:pointer;
-    font-size:15px;
-    transition:.3s;
+.card h2,
+.about h2 {
+    color: #075e54;
+    margin-top: 0;
 }
 
-nav button:hover{
-    background:white;
-    color:var(--primary);
-    transform:translateY(-2px);
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 25px;
 }
 
-/* MAIN */
-
-main{
-    width:min(950px,94%);
-    margin:35px auto;
+.search-box {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
 }
 
-/* SEARCH */
-
-.search-box{
-    display:flex;
-    gap:10px;
-    margin-bottom:22px;
+.search-box input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #c8d8d3;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
 }
 
-.search-box input{
-    flex:1;
-    padding:15px 18px;
-    border:2px solid var(--border);
-    border-radius:13px;
-    outline:none;
-    font-size:16px;
-    background:var(--card);
-    color:var(--text);
+.search-box button {
+    background: #075e54;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0 18px;
+    cursor: pointer;
 }
 
-.search-box input:focus{
-    border-color:var(--primary);
+.categories {
+    margin: 15px 0;
 }
 
-.search-box button{
-    background:var(--primary);
-    color:white;
-    border:none;
-    padding:14px 25px;
-    border-radius:13px;
-    cursor:pointer;
-    font-size:16px;
+.categories button {
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px;
+    margin: 4px;
+    background: #dff4ed;
+    color: #075e54;
+    cursor: pointer;
+    transition: .3s;
 }
 
-/* CATEGORIES */
-
-.categories{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:9px;
-    margin-bottom:28px;
+.quote {
+    margin: 28px 5px;
+    padding: 25px 15px;
+    border-right: 5px solid #128c7e;
+    border-left: 5px solid #128c7e;
+    border-radius: 15px;
+    background: #f2fbf7;
+    font-size: 24px;
+    line-height: 2;
+    font-weight: bold;
+    animation: quoteAnimation .6s ease;
 }
 
-.categories button{
-    background:var(--card);
-    color:var(--primary);
-    border:1px solid var(--border);
-    padding:10px 18px;
-    border-radius:25px;
-    cursor:pointer;
-    font-size:15px;
-    transition:.3s;
+.action-buttons button {
+    border: none;
+    border-radius: 25px;
+    padding: 11px 16px;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+    background: #075e54;
+    transition: .3s;
 }
 
-.categories button:hover,
-.categories button.active{
-    background:var(--primary);
-    color:white;
+.about {
+    display: none;
+    line-height: 2;
 }
 
-/* QUOTE CARD */
-
-.card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:26px;
-    padding:42px 30px;
-    text-align:center;
-    box-shadow:var(--shadow);
-    transition:.3s;
+body.dark {
+    color: #eee;
+    background:
+        radial-gradient(circle at top right, #24443e, transparent 40%),
+        linear-gradient(135deg, #071c18, #102b26, #061410);
 }
 
-.card:hover{
-    transform:translateY(-3px);
+body.dark .card,
+body.dark .about {
+    background: rgba(25,35,33,.96);
+    color: #eee;
 }
 
-.icon{
-    font-size:48px;
-    margin-bottom:10px;
+body.dark .card h2,
+body.dark .about h2 {
+    color: #8ee5d2;
 }
 
-.card h2{
-    color:var(--primary);
-    font-size:27px;
-    margin-bottom:22px;
+body.dark .quote {
+    background: #162b27;
+    color: #fff;
 }
 
-#quote{
-    font-size:27px;
-    line-height:2;
-    max-width:760px;
-    margin:auto;
+body.dark .categories button {
+    background: #25443e;
+    color: #a9eee0;
 }
 
-.source{
-    color:var(--muted);
-    margin-top:18px;
-    font-size:14px;
+body.dark .search-box input {
+    background: #172521;
+    color: white;
+    border-color: #46645e;
 }
 
-/* ACTIONS */
-
-.actions{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:30px;
-}
-
-.actions button{
-    border:none;
-    padding:12px 19px;
-    border-radius:12px;
-    cursor:pointer;
-    font-size:15px;
-    transition:.3s;
-}
-
-.primary{
-    background:var(--primary);
-    color:white;
-}
-
-.secondary{
-    background:var(--secondary);
-    color:var(--primary);
-}
-
-.actions button:hover{
-    transform:translateY(-3px);
-}
-
-/* INFO */
-
-.info-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin-top:25px;
-}
-
-.info{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:20px;
-    text-align:center;
-}
-
-.info strong{
-    display:block;
-    font-size:25px;
-    color:var(--primary);
-}
-
-/* ABOUT */
-
-#about{
-    display:none;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:28px;
-    margin-top:25px;
-    line-height:2;
-}
-
-#about h2{
-    color:var(--primary);
-    margin-bottom:10px;
-}
-
-/* FAVORITES */
-
-#favorites{
-    display:none;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:25px;
-    margin-top:25px;
-}
-
-.favorite-item{
-    padding:15px;
-    border-bottom:1px solid var(--border);
-    line-height:1.8;
-}
-
-.favorite-item:last-child{
-    border-bottom:none;
-}
-
-/* FOOTER */
-
-footer{
-    margin-top:60px;
-    background:var(--primary-dark);
-    color:white;
-    text-align:center;
-    padding:30px 20px;
-}
-
-footer p{
-    margin-top:8px;
-    opacity:.9;
-}
-
-/* TOAST */
-
-#toast{
-    position:fixed;
-    bottom:25px;
-    left:50%;
-    transform:translateX(-50%);
-    background:#103f32;
-    color:white;
-    padding:13px 22px;
-    border-radius:10px;
-    opacity:0;
-    pointer-events:none;
-    transition:.3s;
-    z-index:9999;
-}
-
-#toast.show{
-    opacity:1;
-    bottom:35px;
-}
-
-/* ANIMATION */
-
-.card{
-    animation:appear .5s ease;
-}
-
-@keyframes appear{
-    from{
-        opacity:0;
-        transform:translateY(15px);
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* MOBILE */
-
-@media(max-width:650px){
-
-    .logo{
-        font-size:31px;
+@keyframes quoteAnimation {
+    from {
+        opacity: 0;
+        transform: scale(.96);
     }
 
-    .subtitle{
-        font-size:14px;
-    }
-
-    main{
-        width:94%;
-        margin-top:25px;
-    }
-
-    .search-box{
-        flex-direction:column;
-    }
-
-    .search-box button{
-        width:100%;
-    }
-
-    .card{
-        padding:30px 17px;
-    }
-
-    .card h2{
-        font-size:23px;
-    }
-
-    #quote{
-        font-size:21px;
-        line-height:2;
-    }
-
-    .actions{
-        flex-direction:column;
-    }
-
-    .actions button{
-        width:100%;
-    }
-
-    .info-grid{
-        grid-template-columns:1fr;
-    }
-
-    nav button{
-        font-size:13px;
-        padding:8px 14px;
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
-</style></head><body><header><div class="logo">🕌 اسلامی اقوال</div>
+@media (max-width: 600px) {
 
-<div class="subtitle">
-    خوبصورت باتیں، اچھا کردار، بہتر زندگی
-</div>
+    header h1 {
+        font-size: 26px;
+    }
 
-<nav>
-    <button onclick="home()">🏠 ہوم</button>
-    <button onclick="about()">ℹ️ ہمارے بارے میں</button>
-    <button onclick="showFavorites()">❤️ پسندیدہ</button>
-    <button onclick="darkMode()">🌙 ڈارک موڈ</button>
-</nav>
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
 
-</header><main><!-- SEARCH -->
+    .card,
+    .about {
+        padding: 23px 15px;
+    }
 
-<div class="search-box">
+    .search-box {
+        flex-direction: column;
+    }
 
-    <input
-        id="search"
-        type="text"
-        placeholder="قول تلاش کریں..."
-        onkeydown="if(event.key==='Enter') searchQuote()"
-    >
+    .search-box button {
+        padding: 12px;
+    }
 
-    <button onclick="searchQuote()">
-        🔎 تلاش
-    </button>
+    .quote {
+        font-size: 20px;
+    }
 
-</div>
+    .action-buttons button {
+        width: 90%;
+        margin: 6px auto;
+    }
+}
+</style>
+</head>
 
+<body>
 
-<!-- CATEGORIES -->
+<header>
 
-<div class="categories">
+    <h1>🕌 اسلامی اقوال ✨</h1>
 
-    <button class="active" onclick="category('all',this)">
-        ✨ تمام
-    </button>
+    <nav>
+        <button onclick="goHome()">🏠 ہوم</button>
+        <button onclick="showAbout()">ℹ️ ہمارے بارے میں</button>
+        <button onclick="toggleDark()">🌙 Dark Mode</button>
+    </nav>
 
-    <button onclick="category('quran',this)">
-        📖 قرآن
-    </button>
+</header>
 
-    <button onclick="category('sabr',this)">
-        🤲 صبر
-    </button>
+<div class="container">
 
-    <button onclick="category('akhlaq',this)">
-        ❤️ اخلاق
-    </button>
+    <div id="home" class="card">
 
-    <button onclick="category('parents',this)">
-        👨‍👩‍👦 والدین
-    </button>
+        <h2>✨ آج کا قول ✨</h2>
 
-    <button onclick="category('life',this)">
-        🌿 زندگی
-    </button>
+        <p class="subtitle">
+            اپنی پسند کا قول پڑھیں اور دوسروں تک پہنچائیں
+        </p>
 
-</div>
+        <div class="search-box">
 
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="قول تلاش کریں..."
+            >
 
-<!-- QUOTE -->
+            <button onclick="searchQuote()">🔍 تلاش</button>
 
-<div class="card">
+        </div>
 
-    <div class="icon">☪️</div>
+        <div class="categories">
 
-    <h2 id="heading">آج کا قول</h2>
+            <button onclick="showCategory('قرآن')">📖 قرآن</button>
+            <button onclick="showCategory('صبر')">🤲 صبر</button>
+            <button onclick="showCategory('اخلاق')">❤️ اخلاق</button>
+            <button onclick="showCategory('سب')">✨ سب</button>
 
-    <p id="quote">
-        اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔
-    </p>
+        </div>
 
-    <div class="source" id="source">
-        اسلامی پیغام
+        <div id="quote" class="quote">
+            اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔
+        </div>
+
+        <div class="action-buttons">
+
+            <button onclick="newQuote()">✨ مزید اقوال</button>
+
+            <button onclick="copyQuote()">📋 اقتباس کاپی کریں</button>
+
+            <button onclick="shareQuote()">📤 قول شیئر کریں</button>
+
+        </div>
+
     </div>
 
+    <div id="about" class="about">
 
-    <div class="actions">
+        <h2>🌙 ہمارے بارے میں</h2>
 
-        <button class="primary" onclick="newQuote()">
-            🔄 مزید قول
-        </button>
+        <p>
+            اسلامی اقوال ایک سادہ اور خوبصورت ویب سائٹ ہے
+            جہاں آپ اسلامی اقوال پڑھ سکتے ہیں،
+            کاپی کر سکتے ہیں اور دوسروں تک پہنچا سکتے ہیں۔
+        </p>
 
-        <button class="secondary" onclick="copyQuote()">
-            📋 کاپی
-        </button>
-
-        <button class="secondary" onclick="favoriteQuote()">
-            ❤️ پسندیدہ
-        </button>
-
-        <button class="secondary" onclick="shareQuote()">
-            📤 شیئر
-        </button>
-
-        <button class="secondary" onclick="downloadQuote()">
-            🖼️ تصویر
+        <button class="action-buttons" onclick="goHome()">
+            🏠 واپس ہوم
         </button>
 
     </div>
 
 </div>
 
-
-<!-- STATS -->
-
-<div class="info-grid">
-
-    <div class="info">
-        <strong id="totalQuotes">0</strong>
-        اقوال
-    </div>
-
-    <div class="info">
-        <strong id="favCount">0</strong>
-        پسندیدہ
-    </div>
-
-    <div class="info">
-        <strong>100%</strong>
-        مفت
-    </div>
-
-</div>
-
-
-<!-- ABOUT -->
-
-<div id="about">
-
-    <h2>ہمارے بارے میں</h2>
-
-    <p>
-        اسلامی اقوال ایک سادہ اور خوبصورت ویب سائٹ ہے
-        جس کا مقصد اچھی اور سبق آموز باتوں کو لوگوں تک
-        پہنچانا ہے۔
-    </p>
-
-    <p>
-        یہاں صبر، اخلاق، والدین، زندگی اور اسلامی تعلیمات
-        سے متعلق مختلف پیغامات موجود ہیں۔
-    </p>
-
-</div>
-
-
-<!-- FAVORITES -->
-
-<div id="favorites">
-
-    <h2 style="color:var(--primary);margin-bottom:15px;">
-        ❤️ میرے پسندیدہ اقوال
-    </h2>
-
-    <div id="favoriteList"></div>
-
-</div>
-
-</main><footer><h3>🕌 اسلامی اقوال</h3>
-
-<p>
-    اللہ ہمیں نیک اعمال اور اچھے اخلاق کی توفیق دے۔ آمین 🤲
-</p>
-
-</footer><div id="toast"></div><script>
-
-/* =========================
-   QUOTES DATABASE
-========================= */
+<script>
 
 const quotes = [
 
-{
-text:"اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔",
-category:"quran",
-source:"اسلامی پیغام"
-},
+    {
+        text: "اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔",
+        category: "قرآن"
+    },
 
-{
-text:"بے شک اللہ صبر کرنے والوں کے ساتھ ہے۔",
-category:"sabr",
-source:"اسلامی پیغام"
-},
+    {
+        text: "اللہ صبر کرنے والوں کے ساتھ ہے۔",
+        category: "صبر"
+    },
 
-{
-text:"اچھی بات کہنا بھی صدقہ ہے۔",
-category:"akhlaq",
-source:"اسلامی پیغام"
-},
+    {
+        text: "اچھی بات صدقہ ہے۔",
+        category: "اخلاق"
+    },
 
-{
-text:"والدین کے ساتھ حسنِ سلوک کرو۔",
-category:"parents",
-source:"اسلامی پیغام"
-},
+    {
+        text: "اپنے والدین کے ساتھ اچھا سلوک کرو۔",
+        category: "اخلاق"
+    },
 
-{
-text:"اللہ کی رحمت سے مایوس نہ ہو۔",
-category:"quran",
-source:"اسلامی پیغام"
-},
-
-{
-text:"مشکل وقت میں صبر اور اللہ پر یقین رکھو۔",
-category:"sabr",
-source:"اسلامی پیغام"
-},
-
-{
-text:"لوگوں کے ساتھ نرمی اور اچھے اخلاق سے پیش آؤ۔",
-category:"akhlaq",
-source:"اسلامی پیغام"
-},
-
-{
-text:"اپنے والدین سے محبت اور احترام سے پیش آؤ۔",
-category:"parents",
-source:"اسلامی پیغام"
-},
-
-{
-text:"زندگی میں شکر کو اپنا ساتھی بناؤ۔",
-category:"life",
-source:"اسلامی پیغام"
-},
-
-{
-text:"ہر مشکل کے بعد آسانی آتی ہے، اللہ پر یقین رکھو۔",
-category:"sabr",
-source:"اسلامی پیغام"
-},
-
-{
-text:"معاف کرنا دل کو سکون دیتا ہے۔",
-category:"akhlaq",
-source:"اسلامی پیغام"
-},
-
-{
-text:"نیکی کبھی ضائع نہیں ہوتی۔",
-category:"life",
-source:"اسلامی پیغام"
-}
+    {
+        text: "اللہ کی رحمت سے مایوس نہ ہو۔",
+        category: "صبر"
+    }
 
 ];
 
+function showQuote(text) {
 
-let currentQuotes = quotes;
-let currentQuote = quotes[0];
+    const quoteBox = document.getElementById("quote");
 
+    quoteBox.style.animation = "none";
 
-/* TOTAL */
+    void quoteBox.offsetWidth;
 
-document.getElementById("totalQuotes").innerText =
-    quotes.length;
+    quoteBox.style.animation = "quoteAnimation .6s ease";
 
-
-/* =========================
-   SHOW QUOTE
-========================= */
-
-function displayQuote(q){
-
-    currentQuote = q;
-
-    document.getElementById("quote").innerText =
-        q.text;
-
-    document.getElementById("source").innerText =
-        q.source;
-
+    quoteBox.innerText = text;
 }
 
-
-/* =========================
-   NEW QUOTE
-========================= */
-
-function newQuote(){
+function newQuote() {
 
     const random =
-        Math.floor(Math.random() * currentQuotes.length);
+        Math.floor(Math.random() * quotes.length);
 
-    displayQuote(currentQuotes[random]);
-
+    showQuote(quotes[random].text);
 }
 
+function showCategory(category) {
 
-/* =========================
-   CATEGORY
-========================= */
-
-function category(type,button){
-
-    document
-        .querySelectorAll(".categories button")
-        .forEach(b => b.classList.remove("active"));
-
-    button.classList.add("active");
-
-
-    if(type === "all"){
-
-        currentQuotes = quotes;
-
-        document.getElementById("heading").innerText =
-            "تمام اقوال";
-
-    }
-
-    else{
-
-        currentQuotes =
-            quotes.filter(q => q.category === type);
-
-        const names = {
-
-            quran:"قرآن کے اقوال",
-            sabr:"صبر کے اقوال",
-            akhlaq:"اچھے اخلاق",
-            parents:"والدین",
-            life:"زندگی کے اقوال"
-
-        };
-
-        document.getElementById("heading").innerText =
-            names[type];
-
-    }
-
-
-    newQuote();
-
-}
-
-
-/* =========================
-   SEARCH
-========================= */
-
-function searchQuote(){
-
-    const text =
-        document.getElementById("search")
-        .value
-        .trim()
-        .toLowerCase();
-
-
-    if(!text){
-
-        showToast("براہِ کرم کچھ لکھیں۔");
+    if (category === "سب") {
+        newQuote();
         return;
-
     }
 
+    const filtered =
+        quotes.filter(item => item.category === category);
 
-    const results =
-        quotes.filter(q =>
-            q.text.toLowerCase().includes(text)
-        );
+    if (filtered.length > 0) {
 
+        const random =
+            Math.floor(Math.random() * filtered.length);
 
-    if(results.length){
-
-        currentQuotes = results;
-
-        document.getElementById("heading").innerText =
-            "تلاش کا نتیجہ";
-
-        displayQuote(results[0]);
-
-    }
-
-    else{
-
-        document.getElementById("heading").innerText =
-            "کوئی نتیجہ نہیں";
-
-        document.getElementById("quote").innerText =
-            "😔 اس لفظ سے کوئی قول نہیں ملا۔";
-
-        document.getElementById("source").innerText =
-            "";
-
-    }
-
-}
-
-
-/* =========================
-   COPY
-========================= */
-
-function copyQuote(){
-
-    navigator.clipboard.writeText(
-        currentQuote.text
-    )
-    .then(() => {
-
-        showToast("✅ قول کاپی ہو گیا!");
-
-    })
-    .catch(() => {
-
-        showToast("کاپی نہیں ہو سکا۔");
-
-    });
-
-}
-
-
-/* =========================
-   FAVORITES
-========================= */
-
-function getFavorites(){
-
-    return JSON.parse(
-        localStorage.getItem("islamicFavorites") || "[]"
-    );
-
-}
-
-
-function favoriteQuote(){
-
-    let favorites = getFavorites();
-
-
-    if(!favorites.includes(currentQuote.text)){
-
-        favorites.push(currentQuote.text);
-
-        localStorage.setItem(
-            "islamicFavorites",
-            JSON.stringify(favorites)
-        );
-
-        showToast("❤️ پسندیدہ میں شامل ہو گیا!");
-
-    }
-
-    else{
-
-        showToast("یہ پہلے ہی پسندیدہ میں ہے۔");
-
-    }
-
-
-    updateFavCount();
-
-}
-
-
-function updateFavCount(){
-
-    document.getElementById("favCount").innerText =
-        getFavorites().length;
-
-}
-
-
-function showFavorites(){
-
-    const box =
-        document.getElementById("favorites");
-
-    const list =
-        document.getElementById("favoriteList");
-
-
-    box.style.display = "block";
-
-    const favorites = getFavorites();
-
-
-    if(!favorites.length){
-
-        list.innerHTML =
-            "<p>ابھی کوئی پسندیدہ قول موجود نہیں۔</p>";
-
-    }
-
-    else{
-
-        list.innerHTML =
-            favorites.map((q,index) => `
-
-                <div class="favorite-item">
-
-                    <p>${q}</p>
-
-                    <button
-                        class="secondary"
-                        style="margin-top:10px;"
-                        onclick="removeFavorite(${index})">
-                        🗑️ حذف کریں
-                    </button>
-
-                </div>
-
-            `).join("");
-
-    }
-
-
-    box.scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-function removeFavorite(index){
-
-    let favorites = getFavorites();
-
-    favorites.splice(index,1);
-
-    localStorage.setItem(
-        "islamicFavorites",
-        JSON.stringify(favorites)
-    );
-
-    updateFavCount();
-
-    showFavorites();
-
-}
-
-
-/* =========================
-   SHARE
-========================= */
-
-function shareQuote(){
-
-    const text =
-        currentQuote.text +
-        "\n\n🕌 اسلامی اقوال";
-
-
-    if(navigator.share){
-
-        navigator.share({
-            title:"اسلامی قول",
-            text:text
-        });
-
-    }
-
-    else{
-
-        navigator.clipboard.writeText(text);
-
-        showToast("📤 قول کاپی ہو گیا، اب share کر سکتے ہیں!");
-
-    }
-
-}
-
-
-/* =========================
-   DOWNLOAD QUOTE IMAGE
-========================= */
-
-function downloadQuote(){
-
-    const canvas =
-        document.createElement("canvas");
-
-    canvas.width = 1200;
-    canvas.height = 700;
-
-    const ctx =
-        canvas.getContext("2d");
-
-
-    ctx.fillStyle = "#17624d";
-    ctx.fillRect(0,0,1200,700);
-
-
-    ctx.fillStyle = "#ffffff";
-    ctx.textAlign = "center";
-
-
-    ctx.font = "bold 42px Arial";
-
-    ctx.fillText(
-        "🕌 اسلامی اقوال",
-        600,
-        120
-    );
-
-
-    ctx.font = "32px Arial";
-
-
-    const words =
-        currentQuote.text.split(" ");
-
-    let line = "";
-    let y = 300;
-
-
-    for(let i=0;i<words.length;i++){
-
-        let test =
-            line + words[i] + " ";
-
-        if(ctx.measureText(test).width > 950){
-
-            ctx.fillText(
-                line,
-                600,
-                y
-            );
-
-            line = words[i] + " ";
-            y += 65;
-
-        }
-
-        else{
-
-            line = test;
-
-        }
-
-    }
-
-
-    ctx.fillText(
-        line,
-        600,
-        y
-    );
-
-
-    ctx.font = "22px Arial";
-
-    ctx.fillText(
-        "Islamic Quotes",
-        600,
-        610
-    );
-
-
-    const link =
-        document.createElement("a");
-
-    link.download =
-        "islamic-quote.png";
-
-    link.href =
-        canvas.toDataURL("image/png");
-
-    link.click();
-
-    showToast("🖼️ Quote image تیار ہے!");
-
-}
-
-
-/* =========================
-   DARK MODE
-========================= */
-
-function darkMode(){
-
-    document.body.classList.toggle("dark");
-
-
-    const dark =
-        document.body.classList.contains("dark");
-
-
-    localStorage.setItem(
-        "darkMode",
-        dark
-    );
-
-}
-
-
-/* LOAD DARK MODE */
-
-if(localStorage.getItem("darkMode") === "true"){
-
-    document.body.classList.add("dark");
-
-}
-
-
-/* =========================
-   HOME
-========================= */
-
-function home(){
-
-    document.getElementById("about").style.display =
-        "none";
-
-    document.getElementById("favorites").style.display =
-        "none";
-
-    document.getElementById("heading").innerText =
-        "آج کا قول";
-
-    currentQuotes = quotes;
-
-    displayQuote(quotes[0]);
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-function about(){
-
-    const box =
-        document.getElementById("about");
-
-
-    box.style.display =
-        box.style.display === "block"
-        ? "none"
-        : "block";
-
-
-    if(box.style.display === "block"){
-
-        box.scrollIntoView({
-            behavior:"smooth"
-        });
-
-    }
-
-}
-
-
-/* =========================
-   TOAST
-========================= */
-
-function showToast(message){
-
-    const toast =
-        document.getElementById("toast");
-
-    toast.innerText =
-        message;
-
-    toast.classList.add("show");
-
-
-    setTimeout(() => {
-
-        toast.classList.remove("show");
-
-    },2500);
-
-}
-
-
-/* UPDATE FAVORITES */
-
-updateFavCount();
-
-</script></body>
-</html>
+        showQuote(filtered[random].
