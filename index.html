@@ -1,241 +1,814 @@
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>اسلامی اقوال</title>
+    <title>اسلامی اقوال | Islamic Quotes</title>
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    <meta name="description"
+        content="اسلامی اقوال، قرآن، صبر، اخلاق اور والدین کے بارے میں خوبصورت اور سبق آموز پیغامات۔">
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    color: #17352f;
-    background:
-        radial-gradient(circle at top right, rgba(255,255,255,.9), transparent 35%),
-        linear-gradient(135deg, #b7e4d5, #eefbf5, #a9d8c8);
-    transition: background .4s, color .4s;
-}
+    <style>
 
-/* Header */
-header {
-    padding: 25px 15px;
-    text-align: center;
-    color: white;
-    background: linear-gradient(135deg, #075e54, #128c7e);
-    box-shadow: 0 4px 15px rgba(0,0,0,.2);
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-header h1 {
-    margin: 0 0 15px;
-    font-size: 32px;
-}
+        body {
+            font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq",
+                         "Segoe UI", Tahoma, Arial, sans-serif;
+            background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+            color: #183b32;
+            min-height: 100vh;
+        }
 
-nav button {
-    border: none;
-    border-radius: 25px;
-    padding: 10px 17px;
-    margin: 4px;
-    cursor: pointer;
-    color: #075e54;
-    background: white;
-    font-size: 14px;
-    transition: .3s;
-}
+        /* HEADER */
 
-nav button:hover,
-.action-buttons button:hover,
-.search-box button:hover,
-.categories button:hover {
-    transform: translateY(-3px);
-}
+        header {
+            background: linear-gradient(135deg, #103f32, #17624d);
+            color: white;
+            text-align: center;
+            padding: 35px 20px 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
 
-/* Main */
-.container {
-    width: 92%;
-    max-width: 720px;
-    margin: 35px auto;
-}
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 8px;
+        }
 
-/* Card */
-.card,
-.about {
-    background: rgba(255,255,255,.94);
-    border-radius: 25px;
-    padding: 30px 22px;
-    text-align: center;
-    box-shadow: 0 12px 35px rgba(0,0,0,.15);
-    animation: fadeIn .7s ease;
-}
+        header p {
+            font-size: 17px;
+            opacity: 0.9;
+        }
 
-.card h2,
-.about h2 {
-    color: #075e54;
-    margin-top: 0;
-}
+        /* NAVIGATION */
 
-.subtitle {
-    font-size: 16px;
-    margin-bottom: 25px;
-}
+        nav {
+            margin-top: 22px;
+        }
 
-/* Search */
-.search-box {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 18px;
-}
+        nav button {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.35);
+            padding: 10px 22px;
+            margin: 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
 
-.search-box input {
-    flex: 1;
-    padding: 13px;
-    border: 1px solid #c8d8d3;
-    border-radius: 12px;
-    outline: none;
-    font-size: 16px;
-}
+        nav button:hover {
+            background: white;
+            color: #17624d;
+            transform: translateY(-2px);
+        }
 
-.search-box button {
-    background: #075e54;
-    color: white;
-}
+        /* MAIN */
 
-/* Categories */
-.categories {
-    margin: 15px 0;
-}
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-.categories button {
-    border: none;
-    border-radius: 20px;
-    padding: 9px 15px;
-    margin: 4px;
-    background: #dff4ed;
-    color: #075e54;
-    cursor: pointer;
-    transition: .3s;
-}
+        /* SEARCH */
 
-/* Quote */
-.quote {
-    margin: 28px 5px;
-    padding: 25px 15px;
-    border-right: 5px solid #128c7e;
-    border-left: 5px solid #128c7e;
-    border-radius: 15px;
-    background: #f2fbf7;
-    font-size: 24px;
-    line-height: 2;
-    font-weight: bold;
-    animation: quoteAnimation .6s ease;
-}
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
 
-/* Buttons */
-.action-buttons button {
-    border: none;
-    border-radius: 25px;
-    padding: 11px 16px;
-    margin: 5px;
-    cursor: pointer;
-    color: white;
-    background: #075e54;
-    transition: .3s;
-}
+        .search-box input {
+            flex: 1;
+            padding: 15px 18px;
+            border: 2px solid #c8ddd5;
+            border-radius: 12px;
+            outline: none;
+            font-size: 16px;
+            text-align: right;
+            background: white;
+        }
 
-/* About */
-.about {
-    display: none;
-    line-height: 2;
-}
+        .search-box input:focus {
+            border-color: #17624d;
+        }
 
-/* Dark Mode */
-body.dark {
-    color: #eee;
-    background:
-        radial-gradient(circle at top right, #24443e, transparent 40%),
-        linear-gradient(135deg, #071c18, #102b26, #061410);
-}
+        .search-box button {
+            padding: 14px 25px;
+            background: #17624d;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
 
-body.dark .card,
-body.dark .about {
-    background: rgba(25,35,33,.96);
-    color: #eee;
-}
+        .search-box button:hover {
+            background: #103f32;
+        }
 
-body.dark .card h2,
-body.dark .about h2 {
-    color: #8ee5d2;
-}
+        /* CATEGORY */
 
-body.dark .quote {
-    background: #162b27;
-    color: #fff;
-}
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
 
-body.dark .categories button {
-    background: #25443e;
-    color: #a9eee0;
-}
+        .categories button {
+            border: none;
+            background: white;
+            color: #17624d;
+            border: 1px solid #c8ddd5;
+            padding: 11px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
 
-body.dark .search-box input {
-    background: #172521;
-    color: white;
-    border-color: #46645e;
-}
+        .categories button:hover {
+            background: #17624d;
+            color: white;
+            transform: translateY(-2px);
+        }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+        /* CARD */
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        .card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 25px;
+            padding: 45px 35px;
+            text-align: center;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+            border: 1px solid rgba(23,98,77,0.08);
+        }
 
-@keyframes quoteAnimation {
-    from {
-        opacity: 0;
-        transform: scale(.96);
-    }
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
 
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+        .card h2 {
+            color: #17624d;
+            font-size: 27px;
+            margin-bottom: 25px;
+        }
 
-/* Mobile */
-@media (max-width: 600px) {
+        #quote {
+            font-size: 27px;
+            line-height: 2;
+            color: #263b35;
+            margin: 20px auto 35px;
+            max-width: 750px;
+        }
 
-    header h1 {
-        font-size: 26px;
-    }
+        /* BUTTONS */
 
-    .container {
-        width: 94%;
-        margin: 20px auto;
-    }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
-    .card,
-    .about {
-        padding: 23px 15px;
-    }
+        .action-buttons button {
+            border: none;
+            padding: 13px 22px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
 
-    .search-box {
-        flex-direction: column;
-    }
+        .new-btn {
+            background: #17624d;
+            color: white;
+        }
 
-    .quote {
-        font-size: 20px;
-    }
+        .copy-btn {
+            background: #e7f2ed;
+            color: #17624d;
+        }
 
-    .action-buttons button {
+        .action-buttons button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+        }
+
+        /* ABOUT */
+
+        #about {
+            display: none;
+            margin-top: 25px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            line-height: 2;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        #about h2 {
+            color: #17624d;
+            margin-bottom: 15px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 60px;
+            background: #103f32;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        /* TOAST */
+
+        #toast {
+            visibility: hidden;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #103f32;
+            color: white;
+            padding: 13px 22px;
+            border-radius: 10px;
+            z-index: 1000;
+            font-size: 15px;
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadeInOut 2.5s;
+        }
+
+        @keyframes fadeInOut {
+
+            0% {
+                opacity: 0;
+                bottom: 10px;
+            }
+
+            20% {
+                opacity: 1;
+                bottom: 30px;
+            }
+
+            80% {
+                opacity: 1;
+                bottom: 30px;
+            }
+
+            100% {
+                opacity: 0;
+                bottom: 10px;
+            }
+        }
+
+        /* ANIMATION */
+
+        .card {
+            animation: appear 0.6s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 28px 15px 22px;
+            }
+
+            header h1 {
+                font-size: 31px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            main {
+                margin: 25px auto;
+                padding: 0 13px;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-box button {
+                width: 100%;
+            }
+
+            .card {
+                padding: 30px 18px;
+                border-radius: 20px;
+            }
+
+            .card h2 {
+                font-size: 23px;
+            }
+
+            #quote {
+                font-size: 21px;
+                line-height: 2;
+            }
+
+            .categories button {
+                font-size: 14px;
+                padding: 9px 15px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-buttons button {
+                width: 100%;
+            }
+
+            nav button {
+                padding: 9px 16px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>🕌 اسلامی اقوال</h1>
+
+        <p>قرآن، صبر، اخلاق اور زندگی کے خوبصورت پیغامات</p>
+
+        <nav>
+            <button onclick="goHome()">🏠 ہوم</button>
+            <button onclick="showAbout()">ℹ️ ہمارے بارے میں</button>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="اپنا قول تلاش کریں..."
+                onkeypress="handleEnter(event)"
+            >
+
+            <button onclick="searchQuote()">
+                🔎 تلاش
+            </button>
+
+        </div>
+
+
+        <!-- CATEGORIES -->
+
+        <div class="categories">
+
+            <button onclick="showCategory('all')">
+                ✨ تمام
+            </button>
+
+            <button onclick="showCategory('quran')">
+                📖 قرآن
+            </button>
+
+            <button onclick="showCategory('sabr')">
+                🤲 صبر
+            </button>
+
+            <button onclick="showCategory('akhlaq')">
+                ❤️ اخلاق
+            </button>
+
+            <button onclick="showCategory('parents')">
+                👨‍👩‍👦 والدین
+            </button>
+
+        </div>
+
+
+        <!-- QUOTE CARD -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                ☪️
+            </div>
+
+            <h2 id="heading">
+                آج کا قول
+            </h2>
+
+            <p id="quote">
+                اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔
+            </p>
+
+            <div class="action-buttons">
+
+                <button
+                    class="new-btn"
+                    onclick="newQuote()">
+                    🔄 مزید اقوال
+                </button>
+
+                <button
+                    class="copy-btn"
+                    onclick="copyQuote()">
+                    📋 قول کاپی کریں
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ABOUT -->
+
+        <div id="about">
+
+            <h2>ہمارے بارے میں</h2>
+
+            <p>
+                اسلامی اقوال ایک سادہ اور خوبصورت ویب سائٹ ہے
+                جس کا مقصد قرآن، صبر، اچھے اخلاق، والدین کی عزت
+                اور اسلامی زندگی سے متعلق خوبصورت اور سبق آموز
+                پیغامات لوگوں تک پہنچانا ہے۔
+            </p>
+
+            <br>
+
+            <p>
+                ہمارا مقصد ہے کہ ہر دن ایک اچھی بات پڑھی جائے،
+                اس پر غور کیا جائے اور اپنی زندگی میں اس پر عمل
+                کرنے کی کوشش کی جائے۔
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>🕌 اسلامی اقوال</h3>
+
+        <p>
+            اللہ ہمیں نیک اعمال اور اچھے اخلاق کی توفیق دے۔ آمین 🤲
+        </p>
+
+    </footer>
+
+
+    <!-- TOAST -->
+
+    <div id="toast">
+        قول کاپی ہو گیا!
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const quotes = [
+
+            {
+                text: "اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔",
+                category: "quran"
+            },
+
+            {
+                text: "بے شک اللہ صبر کرنے والوں کے ساتھ ہے۔",
+                category: "sabr"
+            },
+
+            {
+                text: "اچھی بات کہنا بھی صدقہ ہے۔",
+                category: "akhlaq"
+            },
+
+            {
+                text: "اور والدین کے ساتھ حسنِ سلوک کرو۔",
+                category: "parents"
+            },
+
+            {
+                text: "اللہ کی رحمت سے مایوس نہ ہو۔",
+                category: "quran"
+            },
+
+            {
+                text: "صبر کرو، بے شک اللہ صبر کرنے والوں کے ساتھ ہے۔",
+                category: "sabr"
+            },
+
+            {
+                text: "لوگوں کے ساتھ اچھے اخلاق سے پیش آؤ۔",
+                category: "akhlaq"
+            },
+
+            {
+                text: "اپنے والدین کے ساتھ نرمی اور محبت سے پیش آؤ۔",
+                category: "parents"
+            },
+
+            {
+                text: "اللہ کو یاد رکھو، دلوں کو اطمینان اللہ کے ذکر سے ملتا ہے۔",
+                category: "quran"
+            },
+
+            {
+                text: "مشکل وقت ہمیشہ نہیں رہتا، اللہ پر یقین رکھو۔",
+                category: "sabr"
+            }
+
+        ];
+
+
+        let currentQuotes = quotes;
+
+
+        /* NEW QUOTE */
+
+        function newQuote() {
+
+            if (currentQuotes.length === 0) {
+                currentQuotes = quotes;
+            }
+
+            const randomNumber =
+                Math.floor(Math.random() * currentQuotes.length);
+
+            document.getElementById("quote").innerText =
+                currentQuotes[randomNumber].text;
+
+        }
+
+
+        /* COPY */
+
+        function copyQuote() {
+
+            const text =
+                document.getElementById("quote").innerText;
+
+            navigator.clipboard.writeText(text)
+                .then(function () {
+
+                    showToast("✅ قول کاپی ہو گیا!");
+
+                })
+                .catch(function () {
+
+                    showToast("قول کاپی نہیں ہو سکا۔");
+
+                });
+
+        }
+
+
+        /* CATEGORY */
+
+        function showCategory(category) {
+
+            if (category === "all") {
+
+                currentQuotes = quotes;
+
+                document.getElementById("heading").innerText =
+                    "تمام اقوال";
+
+                newQuote();
+
+                return;
+            }
+
+
+            currentQuotes =
+                quotes.filter(function (quote) {
+
+                    return quote.category === category;
+
+                });
+
+
+            if (category === "quran") {
+
+                document.getElementById("heading").innerText =
+                    "قرآن کے اقوال";
+
+            }
+
+            else if (category === "sabr") {
+
+                document.getElementById("heading").innerText =
+                    "صبر کے اقوال";
+
+            }
+
+            else if (category === "akhlaq") {
+
+                document.getElementById("heading").innerText =
+                    "اچھے اخلاق";
+
+            }
+
+            else if (category === "parents") {
+
+                document.getElementById("heading").innerText =
+                    "والدین";
+
+            }
+
+
+            newQuote();
+
+        }
+
+
+        /* HOME */
+
+        function goHome() {
+
+            document.getElementById("about").style.display =
+                "none";
+
+            document.getElementById("heading").innerText =
+                "آج کا قول";
+
+            currentQuotes = quotes;
+
+            document.getElementById("quote").innerText =
+                "اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        /* ABOUT */
+
+        function showAbout() {
+
+            const about =
+                document.getElementById("about");
+
+            if (about.style.display === "block") {
+
+                about.style.display = "none";
+
+            } else {
+
+                about.style.display = "block";
+
+                about.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        }
+
+
+        /* SEARCH */
+
+        function searchQuote() {
+
+            const search =
+                document.getElementById("searchInput")
+                .value
+                .trim()
+                .toLowerCase();
+
+
+            if (search === "") {
+
+                showToast("براہِ کرم کوئی لفظ لکھیں۔");
+
+                return;
+            }
+
+
+            const found =
+                quotes.find(function (quote) {
+
+                    return quote.text
+                        .toLowerCase()
+                        .includes(search);
+
+                });
+
+
+            if (found) {
+
+                document.getElementById("heading").innerText =
+                    "تلاش کا نتیجہ";
+
+                document.getElementById("quote").innerText =
+                    found.text;
+
+            } else {
+
+                document.getElementById("heading").innerText =
+                    "نتیجہ";
+
+                document.getElementById("quote").innerText =
+                    "😔 کوئی قول نہیں ملا۔";
+
+            }
+
+        }
+
+
+        /* ENTER SEARCH */
+
+        function handleEnter(event) {
+
+            if (event.key === "Enter") {
+
+                searchQuote();
+
+            }
+
+        }
+
+
+        /* TOAST */
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById("toast");
+
+            toast.innerText = message;
+
+            toast.classList.add("show");
+
+
+            setTimeout(function () {
+
+                toast.classList.remove("show");
+
+            }, 2500);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
