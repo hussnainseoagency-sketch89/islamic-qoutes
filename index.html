@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Islamic Quotes</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f2;
+            text-align: center;
+        }
+
+        header {
+            background-color: #174a3b;
+            color: white;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 35px;
+        }
+
+        .card {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            color: #174a3b;
+        }
+
+        #quote {
+            font-size: 24px;
+            line-height: 1.8;
+        }
+
+        button {
+            background-color: #174a3b;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 20px;
+            background-color: #174a3b;
+            color: white;
+        }
+
+        /* Mobile Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .card {
+                width: 75%;
+                margin: 30px auto;
+                padding: 25px;
+            }
+
+            #quote {
+                font-size: 19px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 12px 22px;
+            }
+        }
+nav {
+    margin-top: 15px;
+}
+
+nav button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #2e7d32;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+nav button:hover {
+    transform: scale(1.05);
+}
+body {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+@media (max-width: 600px) {
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box input {
+        width: 80%;
+    }
+
+    .search-box button {
+        width: 50%;
+    }
+
+    .categories button {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+    <h1>اسلامی اقوال</h1>
+
+    <nav>
+        <button onclick="goHome()">ہوم</button>
+        <button onclick="showAbout()">ہمارے بارے میں</button>
+    </nav>
+</header>
+
+    <div class="card">
+        <h2>آج کا قول</h2>
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="قول تلاش کریں...">
+    <button onclick="searchQuote()">تلاش</button>
+</div>
+<div class="categories">
+    <button onclick="showCategory('quran')">قرآن</button>
+    <button onclick="showCategory('sabr')">صبر</button>
+    <button onclick="showCategory('akhlaq')">اخلاق</button>
+</div>
+
+        <p id="quote">
+            اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔
+        </p>
+
+        <button onclick="newQuote()">مزید اقوال</button>
+<button onclick="copyQuote()">اقتباس کاپی کریں</button>
+    </div>
+
+    <footer>
+        <p>اللہ ہمیں نیک اعمال کی توفیق دے۔ آمین</p>
+    </footer>
+
+    <script>
+        let quotes = [
+            "اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔",
+            "اللہ صبر کرنے والوں کے ساتھ ہے۔",
+            "اچھی بات صدقہ ہے۔",
+            "اپنے والدین کے ساتھ اچھا سلوک کرو۔",
+            "اللہ کی رحمت سے مایوس نہ ہو۔"
+        ];
+
+        let number = 0;
+
+       function newQuote() {
+    let randomNumber = Math.floor(Math.random() * quotes.length);
+
+    document.getElementById("quote").innerText =
+        quotes[randomNumber];
+}
+function copyQuote() {
+    let text = document.getElementById("quote").innerText;
+    navigator.clipboard.writeText(text);
+    alert("اقتباس کاپی ہو گیا!");
+}
+ function showCategory(category) {
+
+    if (category === "quran") {
+        document.getElementById("quote").innerText =
+        "اللہ کو یاد رکھو، بے شک دلوں کو اطمینان اللہ کے ذکر سے ملتا ہے۔";
+    }
+
+    if (category === "sabr") {
+        document.getElementById("quote").innerText =
+        "صبر کرو، بے شک اللہ صبر کرنے والوں کے ساتھ ہے۔";
+    }
+
+    if (category === "akhlaq") {
+        document.getElementById("quote").innerText =
+        "لوگوں کے ساتھ اچھے اخلاق سے پیش آؤ۔";
+    }
+}
+function goHome() {
+    document.getElementById("quote").innerText =
+    "اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔";
+}
+
+function showAbout() {
+    document.getElementById("quote").innerText =
+    "یہ ویب سائٹ اسلامی اقوال، صبر، قرآن اور اچھے اخلاق کے بارے میں خوبصورت پیغامات کے لیے بنائی گئی ہے۔";
+}
+function searchQuote() {
+    let search = document.getElementById("searchInput").value;
+
+    let found = quotes.find(function(quote) {
+        return quote.includes(search);
+    });
+
+    if (found) {
+        document.getElementById("quote").innerText = found;
+    } else {
+        document.getElementById("quote").innerText =
+        "کوئی قول نہیں ملا۔";
+    }
+}
+    </script>
+
+</body>
+</html>
