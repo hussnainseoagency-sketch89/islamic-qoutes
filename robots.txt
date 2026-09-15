@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hussnainseoagency-sketch89.github.io/islamic-qoutes/sitemap.xml
