@@ -131,10 +131,29 @@ body {
     }
 }
     </style>
+    <style>
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark .card {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark input {
+    background: #2b2b2b;
+    color: white;
+    border-color: #555;
+}
+</style>
 </head>
 
 <body>
-
+<button onclick="document.body.classList.toggle('dark')">
+🌙 Dark Mode
+</button>
     <header>
     <h1>اسلامی اقوال</h1>
 
