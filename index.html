@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>اسلامی اقوال</title>
 
 <style>
@@ -12,90 +13,91 @@
 
 body {
     margin: 0;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #d9f3ee, #f5fff8, #c8e6c9);
-    color: #222;
-    transition: 0.4s;
+    color: #17352f;
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.9), transparent 35%),
+        linear-gradient(135deg, #b7e4d5, #eefbf5, #a9d8c8);
+    transition: background .4s, color .4s;
 }
 
+/* Header */
 header {
-    background: #075e54;
-    color: white;
-    padding: 18px;
+    padding: 25px 15px;
     text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #075e54, #128c7e);
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
 }
 
 header h1 {
-    margin: 0;
-}
-
-nav {
-    margin-top: 12px;
+    margin: 0 0 15px;
+    font-size: 32px;
 }
 
 nav button {
-    background: white;
-    color: #075e54;
     border: none;
-    padding: 8px 15px;
+    border-radius: 25px;
+    padding: 10px 17px;
     margin: 4px;
-    border-radius: 20px;
     cursor: pointer;
-}
-
-nav button:hover {
-    transform: scale(1.05);
-}
-
-.container {
-    max-width: 700px;
-    margin: 30px auto;
-    padding: 15px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    animation: fadeIn 0.6s ease;
-}
-
-.card h2 {
     color: #075e54;
+    background: white;
+    font-size: 14px;
+    transition: .3s;
 }
 
-.quote {
-    font-size: 23px;
-    line-height: 2;
-    margin: 25px 0;
+nav button:hover,
+.action-buttons button:hover,
+.search-box button:hover,
+.categories button:hover {
+    transform: translateY(-3px);
 }
 
+/* Main */
+.container {
+    width: 92%;
+    max-width: 720px;
+    margin: 35px auto;
+}
+
+/* Card */
+.card,
+.about {
+    background: rgba(255,255,255,.94);
+    border-radius: 25px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0,0,0,.15);
+    animation: fadeIn .7s ease;
+}
+
+.card h2,
+.about h2 {
+    color: #075e54;
+    margin-top: 0;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Search */
 .search-box {
     display: flex;
     gap: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .search-box input {
     flex: 1;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    padding: 13px;
+    border: 1px solid #c8d8d3;
+    border-radius: 12px;
+    outline: none;
     font-size: 16px;
-}
-
-button {
-    border: none;
-    padding: 10px 17px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
 }
 
 .search-box button {
@@ -103,65 +105,94 @@ button:hover {
     color: white;
 }
 
+/* Categories */
 .categories {
     margin: 15px 0;
 }
 
 .categories button {
-    background: #e8f5f2;
-    color: #075e54;
+    border: none;
+    border-radius: 20px;
+    padding: 9px 15px;
     margin: 4px;
+    background: #dff4ed;
+    color: #075e54;
+    cursor: pointer;
+    transition: .3s;
 }
 
+/* Quote */
+.quote {
+    margin: 28px 5px;
+    padding: 25px 15px;
+    border-right: 5px solid #128c7e;
+    border-left: 5px solid #128c7e;
+    border-radius: 15px;
+    background: #f2fbf7;
+    font-size: 24px;
+    line-height: 2;
+    font-weight: bold;
+    animation: quoteAnimation .6s ease;
+}
+
+/* Buttons */
 .action-buttons button {
-    background: #075e54;
-    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 11px 16px;
     margin: 5px;
+    cursor: pointer;
+    color: white;
+    background: #075e54;
+    transition: .3s;
 }
 
-.subtitle {
-    margin: 15px 0;
-    font-size: 16px;
-}
-
+/* About */
 .about {
     display: none;
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
+    line-height: 2;
 }
 
+/* Dark Mode */
 body.dark {
-    background: #121212;
-    color: white;
+    color: #eee;
+    background:
+        radial-gradient(circle at top right, #24443e, transparent 40%),
+        linear-gradient(135deg, #071c18, #102b26, #061410);
 }
 
 body.dark .card,
 body.dark .about {
-    background: #1e1e1e;
-    color: white;
+    background: rgba(25,35,33,.96);
+    color: #eee;
 }
 
-body.dark .card h2 {
-    color: #7ee2d0;
+body.dark .card h2,
+body.dark .about h2 {
+    color: #8ee5d2;
 }
 
-body.dark input {
-    background: #2b2b2b;
-    color: white;
-    border-color: #555;
+body.dark .quote {
+    background: #162b27;
+    color: #fff;
 }
 
 body.dark .categories button {
-    background: #333;
-    color: white;
+    background: #25443e;
+    color: #a9eee0;
 }
 
+body.dark .search-box input {
+    background: #172521;
+    color: white;
+    border-color: #46645e;
+}
+
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(15px);
+        transform: translateY(20px);
     }
 
     to {
@@ -170,9 +201,33 @@ body.dark .categories button {
     }
 }
 
+@keyframes quoteAnimation {
+    from {
+        opacity: 0;
+        transform: scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
     .container {
-        margin: 15px auto;
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .card,
+    .about {
+        padding: 23px 15px;
     }
 
     .search-box {
@@ -182,223 +237,5 @@ body.dark .categories button {
     .quote {
         font-size: 20px;
     }
-}
-</style>
-</head>
 
-<body>
-
-<header>
-    <h1>🕌 اسلامی اقوال ✨</h1>
-
-    <nav>
-        <button onclick="goHome()">🏠 ہوم</button>
-        <button onclick="showAbout()">ℹ️ ہمارے بارے میں</button>
-        <button onclick="toggleDark()">🌙 Dark Mode</button>
-    </nav>
-</header>
-
-<div class="container">
-
-    <div id="home" class="card">
-
-        <h2>آج کا قول</h2>
-
-        <p class="subtitle">
-            ✨ اپنی پسند کا قول پڑھیں اور دوسروں تک پہنچائیں
-        </p>
-
-        <div class="search-box">
-            <input id="searchInput" type="text" placeholder="قول تلاش کریں...">
-            <button onclick="searchQuote()">تلاش</button>
-        </div>
-
-        <div class="categories">
-            <button onclick="showCategory('قرآن')">قرآن</button>
-            <button onclick="showCategory('صبر')">صبر</button>
-            <button onclick="showCategory('اخلاق')">اخلاق</button>
-            <button onclick="showCategory('سب')">سب</button>
-        </div>
-
-        <div id="quote" class="quote">
-            اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔
-        </div>
-
-        <div class="action-buttons">
-            <button onclick="newQuote()">✨ مزید اقوال</button>
-            <button onclick="copyQuote()">📋 اقتباس کاپی کریں</button>
-            <button onclick="shareQuote()">📤 قول شیئر کریں</button>
-        </div>
-
-    </div>
-
-    <div id="about" class="about">
-
-        <h2>ہمارے بارے میں</h2>
-
-        <p>
-            اسلامی اقوال ایک سادہ ویب سائٹ ہے جہاں آپ خوبصورت
-            اسلامی اقوال پڑھ سکتے ہیں اور دوسروں تک پہنچا سکتے ہیں۔
-        </p>
-
-        <button onclick="goHome()">🏠 واپس ہوم</button>
-
-    </div>
-
-</div>
-
-<script>
-
-let quotes = [
-
-    {
-        text: "اللہ پر بھروسہ رکھو، بے شک اللہ بہترین کارساز ہے۔",
-        category: "قرآن"
-    },
-
-    {
-        text: "اللہ صبر کرنے والوں کے ساتھ ہے۔",
-        category: "صبر"
-    },
-
-    {
-        text: "اچھی بات صدقہ ہے۔",
-        category: "اخلاق"
-    },
-
-    {
-        text: "اپنے والدین کے ساتھ اچھا سلوک کرو۔",
-        category: "اخلاق"
-    },
-
-    {
-        text: "اللہ کی رحمت سے مایوس نہ ہو۔",
-        category: "صبر"
-    }
-
-];
-
-let currentQuote = 0;
-
-function newQuote() {
-
-    currentQuote = Math.floor(Math.random() * quotes.length);
-
-    showQuote(quotes[currentQuote].text);
-
-}
-
-function showQuote(text) {
-
-    let quoteBox = document.getElementById("quote");
-
-    quoteBox.style.animation = "none";
-
-    void quoteBox.offsetWidth;
-
-    quoteBox.style.animation = "fadeIn 0.6s ease";
-
-    quoteBox.innerText = text;
-
-}
-
-function showCategory(category) {
-
-    if (category === "سب") {
-        newQuote();
-        return;
-    }
-
-    let filtered = quotes.filter(function(item) {
-        return item.category === category;
-    });
-
-    if (filtered.length > 0) {
-
-        let random = Math.floor(Math.random() * filtered.length);
-
-        showQuote(filtered[random].text);
-
-    }
-
-}
-
-function copyQuote() {
-
-    let text = document.getElementById("quote").innerText;
-
-    navigator.clipboard.writeText(text);
-
-    alert("قول کاپی ہو گیا! ✅");
-
-}
-
-function shareQuote() {
-
-    let text = document.getElementById("quote").innerText;
-
-    if (navigator.share) {
-
-        navigator.share({
-            title: "اسلامی قول",
-            text: text
-        });
-
-    } else {
-
-        navigator.clipboard.writeText(text);
-
-        alert("قول کاپی ہو گیا، اب آپ اسے شیئر کر سکتے ہیں! ✅");
-
-    }
-
-}
-
-function searchQuote() {
-
-    let search = document.getElementById("searchInput").value.toLowerCase();
-
-    let result = quotes.find(function(item) {
-
-        return item.text.toLowerCase().includes(search);
-
-    });
-
-    if (result) {
-
-        showQuote(result.text);
-
-    } else {
-
-        alert("کوئی قول نہیں ملا۔");
-
-    }
-
-}
-
-function toggleDark() {
-
-    document.body.classList.toggle("dark");
-
-}
-
-function showAbout() {
-
-    document.getElementById("home").style.display = "none";
-
-    document.getElementById("about").style.display = "block";
-
-}
-
-function goHome() {
-
-    document.getElementById("home").style.display = "block";
-
-    document.getElementById("about").style.display = "none";
-
-}
-
-</script>
-
-</body>
-</html>
+    .action-buttons button {
